@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import {Login} from "./layout/index"
 
 function App() {
   return (
     <>
-      <h1 className='text-xl font-semibold'>Hello Welcome to React!!!</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} exact />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
